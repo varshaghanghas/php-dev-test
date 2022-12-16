@@ -20,7 +20,7 @@ make changes fit with the existing visual page design:
 
 1. Change the multi-line _Street Address_ field into _Line 1_ and _Line 2_
    fields. The _Line 2_ field should be optional.
-2. Add a check-mark and the following text below the _Order Summary_ section:
+2. Add a checkbox and the following text below the _Order Summary_ section:
    > With our “Rise & Shine” beta program, you get early access to new
    > features, but they may not always work perfectly. You can change your beta
    > preference at any time after you join.
