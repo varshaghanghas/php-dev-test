@@ -67,7 +67,5 @@ abstract class Controller
             : 'HTTP/1.0';
     }
 
-    protected function loadData(): void
-    {
-    }
+    protected function loadData(): void {}
 }

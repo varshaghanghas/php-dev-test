@@ -68,8 +68,8 @@ required.
 
 ## Coding Standard
 
-Please use [PSR-12 and PSR-4](http://www.php-fig.org/psr/) for your code. The
-[PHP CS Fixer](https://cs.symfony.com/) tool can be used to check your code.
+Please use [PER-CS](https://www.php-fig.org/per/coding-style/) for your code.
+The [PHP CS Fixer](https://cs.symfony.com/) tool can be used to check your code.
 
 The project is set up to lint your code using:
 

@@ -10,7 +10,7 @@ $finder = (new Finder())
 return (new Config())
     ->setParallelConfig(ParallelConfigFactory::detect(null, null, 2**18-1))
     ->setRules([
-        '@PSR12'      => true,
+        '@PER-CS'          => true,
         '@PHP82Migration'  => true,
     ])
     ->setIndent('    ')
