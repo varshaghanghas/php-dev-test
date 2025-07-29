@@ -29,9 +29,6 @@ make changes fit with the existing visual page design:
 4. Add a submit button to the form. The button should have the title
    _Place Order_.
 
-The template for the checkout page is in `src/Templates/Checkout.php`. The
-styles for the page are in `assets/index.css`.
-
 ### 2 — Database Access
 
 Using the same provided basic web framework, and data fixtures for authors and
@@ -39,16 +36,14 @@ posts that are provided:
 
 1.  Write an importer in PHP that imports a list of post files (examples are
     provided in the `data` folder) into the database.
-2.  Update `src/Controller/PostDetails.php` to load a published post from
-    the database with the specified id. Update the
-    `src/Template/PostDetails.php` template to render the post content
-    (title, body, author) as HTML. _The post body is formatted as Markdown and
-    the HTML should include the formatted Markdown_.
-3.  Update the `src/Controller/PostIndex.php` to load all published posts from
-    the database in reverse chronological order. Update the
-    `src/Template/PostIndex.php` template to render ths list as HTML. Include
-    the post titles and authors in the output. Make clicking a post go
-    to the post details.
+2.  Update the post details controller to load a published post from the 
+    database with the specified id. Update the post details template to render
+    the post content (title, body, author) as HTML. _The post body is 
+    formatted as Markdown and the HTML should include the formatted Markdown_.
+3.  Update the post index controller to load all published posts from the 
+    database in reverse chronological order. Update the post index template to 
+    render ths list as HTML. Include the post titles and authors in the output.
+    Make clicking a post go to the post details.
 
 The provided basic web framework is a guideline—feel free to adapt it however
 you like to achieve the tasks above.
