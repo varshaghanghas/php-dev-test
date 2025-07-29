@@ -58,7 +58,7 @@ you like to achieve the tasks above.
 ## Environment
 
 You may use any
-[currently supported version of PHP](https://www.php.net/supported-versions.php).
+[currently supported version of PHP greater than 8.2](https://www.php.net/supported-versions.php).
 If you are using macOS,
 [installing PHP via brew](https://formulae.brew.sh/formula/php) is recommended.
 The default PHP provided by macOS can only connect to MySQL.
