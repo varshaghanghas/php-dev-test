@@ -69,8 +69,7 @@ required.
 ## Coding Standard
 
 Please use [PSR-12 and PSR-4](http://www.php-fig.org/psr/) for your code. The
-[PHPCS](https://github.com/squizlabs/PHP_CodeSniffer) tool can be used to check
-your code.
+[PHP CS Fixer](https://cs.symfony.com/) tool can be used to check your code.
 
 The project is set up to lint your code using:
 
@@ -78,9 +77,16 @@ The project is set up to lint your code using:
 composer run lint
 ```
 
+You can also use the static analysis tool [PHPStan](https://phpstan.org/) to
+analyze your code for errors.
+
+```sh
+composer run phpstan
+```
+
 ## Dependencies
 
-Pease use the [Composer](https://getcomposer.org/) tool for dependency
+Please use the [Composer](https://getcomposer.org/) tool for dependency
 management. You can use any 3rd-party libraries as necessary or as desired in
 order to achieve the tasks.
 
@@ -93,7 +99,7 @@ self-identifying information in your commit messages.**
 ## Getting Started with the PHP Application
 
 Provided is an extremely basic PHP web framework. The provided web framework
-runs using PHP’s built-in web server using using the command:
+runs using PHP’s built-in web server using the command:
 
 ```sh
 composer run start

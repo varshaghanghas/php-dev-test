@@ -8,10 +8,8 @@ class PostDetails extends Layout
 {
     protected function renderPage(Context $context): string
     {
-        // @codingStandardsIgnoreStart
         return <<<HTML
-<p>SHOW CONTENT FOR {$context->getPostId()} HERE</p>
-HTML;
-        // @codingStandardsIgnoreEnd
+            <p>SHOW CONTENT FOR {$context->content} HERE</p>
+            HTML;
     }
 }

@@ -8,11 +8,9 @@ class NotFound extends Layout
 {
     protected function renderPage(Context $context): string
     {
-        // @codingStandardsIgnoreStart
         return <<<HTML
-                <h1>Sorry</h1>
-                <p>{$context->content}</p>
-HTML;
-        // @codingStandardsIgnoreEnd
+                            <h1>Sorry</h1>
+                            <p>{$context->content}</p>
+            HTML;
     }
 }

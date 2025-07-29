@@ -8,8 +8,16 @@ use silverorange\DevTest\Template;
 abstract class Controller
 {
     protected \PDO $db;
+
+    /**
+     * @var array<string>
+     */
     protected array $params = [];
 
+    /**
+     * @param \PDO  $db
+     * @param array<string> $params
+     */
     public function __construct(\PDO $db, array $params)
     {
         $this->setDatabase($db)->setParams($params);
@@ -22,6 +30,11 @@ abstract class Controller
         return $this;
     }
 
+    /**
+     * @param array<string> $params
+     *
+     * @return $this
+     */
     public function setParams(array $params): self
     {
         $this->params = $params;
@@ -30,7 +43,7 @@ abstract class Controller
 
     public function getStatus(): string
     {
-        return $_SERVER['SERVER_PROTOCOL'] . ' 200 OK';
+        return $this->getProtocol() . ' 200 OK';
     }
 
     public function getContentType(): string
@@ -45,6 +58,13 @@ abstract class Controller
     {
         header($this->getStatus());
         header('Content-Type: ' . $this->getContentType());
+    }
+
+    protected function getProtocol(): string
+    {
+        return is_string($_SERVER['SERVER_PROTOCOL'])
+            ? $_SERVER['SERVER_PROTOCOL']
+            : 'HTTP/1.0';
     }
 
     protected function loadData(): void

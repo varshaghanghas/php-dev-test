@@ -13,7 +13,6 @@ class Checkout extends Layout
     {
         $content = $this->header->render($context);
 
-        // @codingStandardsIgnoreStart
         return <<<HTML
                 <form method="post" accept-charset="utf-8" action="checkout" class="form" novalidate="novalidate">
                     <div class="frame">
@@ -105,7 +104,6 @@ class Checkout extends Layout
                         </div>
                     </div>
                 </form>
-HTML;
-        // @codingStandardsIgnoreEnd
+            HTML;
     }
 }

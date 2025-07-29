@@ -8,10 +8,8 @@ class PostIndex extends Layout
 {
     protected function renderPage(Context $context): string
     {
-        // @codingStandardsIgnoreStart
         return <<<HTML
-<p>SHOW ALL THE POSTS HERE</p>
-HTML;
-        // @codingStandardsIgnoreEnd
+            <p>SHOW ALL {$context->content} POSTS HERE</p>
+            HTML;
     }
 }

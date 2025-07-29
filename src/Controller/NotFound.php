@@ -22,6 +22,6 @@ class NotFound extends Controller
 
     public function getStatus(): string
     {
-        return $_SERVER['SERVER_PROTOCOL'] . ' 404 Not Found';
+        return $this->getProtocol() . ' 404 Not Found';
     }
 }

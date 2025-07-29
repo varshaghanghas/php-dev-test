@@ -8,6 +8,12 @@ use silverorange\DevTest\Model;
 
 class PostDetails extends Controller
 {
+    /**
+     * TODO: When this property is assigned in loadData this PHPStan override
+     * can be removed.
+     *
+     * @phpstan-ignore property.unusedType
+     */
     private ?Model\Post $post = null;
 
     public function getContext(): Context
@@ -19,6 +25,7 @@ class PostDetails extends Controller
             $context->content = "A post with id {$this->params[0]} was not found.";
         } else {
             $context->title = $this->post->title;
+            $context->content = $this->params[0];
         }
 
         return $context;
@@ -36,10 +43,10 @@ class PostDetails extends Controller
     public function getStatus(): string
     {
         if ($this->post === null) {
-            return $_SERVER['SERVER_PROTOCOL'] . ' 404 Not Found';
+            return $this->getProtocol() . ' 404 Not Found';
         }
 
-        return $_SERVER['SERVER_PROTOCOL'] . ' 200 OK';
+        return $this->getProtocol() . ' 200 OK';
     }
 
     protected function loadData(): void

@@ -11,18 +11,17 @@
     }
   ],
   "require": {
-    "php": ">=8.1.27"
+    "php": ">=8.1.33",
+    "ext-pdo": "*"
   },
   "require-dev": {
-    "squizlabs/php_codesniffer": "^3.7.1"
+    "friendsofphp/php-cs-fixer": "^3.84",
+    "phpstan/phpstan": "^2.1"
   },
   "scripts": {
-    "lint": [
-      "phpcs --standard=PSR12 --extensions=php --colors src/"
-    ],
-    "start": [
-      "php -S localhost:8000 src/index.php"
-    ]
+    "lint": "./vendor/bin/php-cs-fixer check -v",
+    "phpstan": "./vendor/bin/phpstan analyze",
+    "start": "php -S localhost:8000 src/index.php"
   },
   "autoload": {
     "psr-4": {

@@ -1,0 +1,7 @@
+parameters:
+  phpVersion: 80200
+  level: 10
+  paths:
+    - src
+  editorUrl: '%%file%%:%%line%%'
+  editorUrlTitle: '%%file%%:%%line%%'

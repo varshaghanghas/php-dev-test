@@ -13,7 +13,9 @@ class App
 
     public function run(): bool
     {
-        $path = $_SERVER['REQUEST_URI'];
+        $path = is_string($_SERVER['REQUEST_URI'])
+            ? $_SERVER['REQUEST_URI']
+            : '';
 
         // Serve static assets.
         if (preg_match('@^/(assets|images)(/|$)@', $path) === 1) {
